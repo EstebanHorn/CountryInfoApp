@@ -19,14 +19,14 @@ export default async function Page({ params }) {
           alt={data.countryInfo.commonName}
           className="w-24 h-auto"
         />
-        <h1 className="text-white font-bold text-5xl">
+        <h1 className="text-gray-800 font-bold text-5xl">
           {data.countryInfo.commonName}
         </h1>
       </div>
       <div className="flex w-full md:flex-row flex-col justify-evenly items-center md:gap-0 gap-10">
         <div className="flex flex-col gap-10">
           <h2 className="text-2xl font-bold">Countries that border</h2>
-          <ul className="border border-white divide-y-2">
+          <ul className="border border-gray-800 divide-y-2 divide-gray-800">
             {data.countryInfo.borders.map((border) => (
               <li key={border.countryCode} className="text-center p-2">
                 <Link href={`/${border.countryCode}`} className="hover:text-blue-600">{border.commonName}</Link>
